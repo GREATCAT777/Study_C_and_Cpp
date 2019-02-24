@@ -112,7 +112,7 @@
 //private :
 //	int Payment = 1000;
 //public :
-//	void payTo(Customer customer) {
+//	void DemandTo(Customer customer) {
 //		try {
 //			int paidAmount = customer.getPayment(Payment);
 //		}
