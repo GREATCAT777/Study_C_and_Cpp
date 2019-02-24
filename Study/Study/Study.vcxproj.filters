@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\01.C">
+      <UniqueIdentifier>{f9e5c29c-5824-426f-9913-deea0819936c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Cpp">
+      <UniqueIdentifier>{5250481b-2057-4093-a8b9-f46d4a7fbcd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Cpp\Effective_cpp">
+      <UniqueIdentifier>{791b189f-ea07-4b77-890c-ab9fdeb57963}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.C_sharp">
+      <UniqueIdentifier>{769e5aa2-1bf3-443b-9efd-f357ff16792f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.Cpp\GangEu">
+      <UniqueIdentifier>{1fce7e19-700e-4160-aca4-326a3df53466}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\01.C\1주차 - 1(선분 충).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\1주차 - 2(역삼각).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\1주차 - 3(사각 충돌).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\1주차 - 4(원 충).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\1주차 - 5(원 사각 충).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\1주차 - 6(자료구조 - 리스트).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\2주차 - 1(학원강의1).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\2주차 - 2(학원강의2).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\2주차 - 3(malloc행렬과제).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\2주차 - 4(삼항연산).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\3주차 - 1(학원강).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\3주차 - 2(리스트 만들다 실).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 1(강사님 리스트).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 2(지렁이게임).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 3(지렁이게임 개정).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 4(다른 학생 지렁이 게임).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 5(테트리스).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 6(테트리스 참고1).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\01.C\4주차 - 7(테트리스 참고2).c">
+      <Filter>소스 파일\01.C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\Effective_cpp\box.cpp">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\Effective_cpp\main.cpp">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\Effective_cpp\TextBlock.cpp">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 1(교육자료).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 2(보드게임1).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 3(보드게임2).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 4(HW1801-1).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 1(강의 자료).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 2(원형 리스트 연습).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 3(다중상속 다이아몬드).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 4(코딩 연습).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 5(템플릿).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 6(레퍼런스 참조자).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 1(강의 자료).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 2(알고리즘 연습).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 3(클래스 원형큐)X.cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 4(벡터 컨테이너).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp">
+      <Filter>소스 파일\02.Cpp\GangEu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\02.Cpp\Effective_cpp\box.h">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\02.Cpp\Effective_cpp\CTextBlock.h">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\02.Cpp\Effective_cpp\TextBlock.h">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
