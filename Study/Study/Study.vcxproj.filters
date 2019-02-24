@@ -21,15 +21,15 @@
     <Filter Include="소스 파일\03.C_sharp">
       <UniqueIdentifier>{769e5aa2-1bf3-443b-9efd-f357ff16792f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\02.Cpp\GangEu">
-      <UniqueIdentifier>{1fce7e19-700e-4160-aca4-326a3df53466}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\02.Cpp\OOP_Design_Pattern">
       <UniqueIdentifier>{c3c38b77-3edb-45ab-9390-60aba19324d0}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\03.C_sharp\헤더 파일">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\02.Cpp\강의">
+      <UniqueIdentifier>{1fce7e19-700e-4160-aca4-326a3df53466}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -99,51 +99,6 @@
     <ClCompile Include="..\02.Cpp\Effective_cpp\TextBlock.cpp">
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
     </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\5주차 - 1(교육자료).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\5주차 - 2(보드게임1).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\5주차 - 3(보드게임2).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\5주차 - 4(HW1801-1).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\6주차 - 1(강의 자료).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\6주차 - 2(원형 리스트 연습).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\6주차 - 3(다중상속 다이아몬드).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\6주차 - 4(코딩 연습).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\6주차 - 5(템플릿).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\6주차 - 6(레퍼런스 참조자).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\7주차 - 1(강의 자료).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\7주차 - 2(알고리즘 연습).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\7주차 - 3(클래스 원형큐)X.cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\7주차 - 4(벡터 컨테이너).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp">
-      <Filter>소스 파일\02.Cpp\GangEu</Filter>
-    </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\01.객체지향과절차지향.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
@@ -158,6 +113,51 @@
     </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\05.캡슐화.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 1(교육자료).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 2(보드게임1).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 3(보드게임2).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\5주차 - 4(HW1801-1).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 1(강의 자료).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 2(원형 리스트 연습).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 3(다중상속 다이아몬드).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 4(코딩 연습).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 5(템플릿).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\6주차 - 6(레퍼런스 참조자).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 1(강의 자료).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 2(알고리즘 연습).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 3(클래스 원형큐)X.cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 4(벡터 컨테이너).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp">
+      <Filter>소스 파일\02.Cpp\강의</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
