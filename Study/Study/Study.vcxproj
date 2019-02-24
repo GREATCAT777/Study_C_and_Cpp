@@ -137,6 +137,11 @@
     <ClCompile Include="..\02.Cpp\Effective_cpp\box.cpp" />
     <ClCompile Include="..\02.Cpp\Effective_cpp\main.cpp" />
     <ClCompile Include="..\02.Cpp\Effective_cpp\TextBlock.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\01.객체지향과절차지향.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\02.객체.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\03.객체의 책임과 크기.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\04.의존.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\05.캡슐화.cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 1(교육자료).cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 2(보드게임1).cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 3(보드게임2).cpp" />
