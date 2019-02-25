@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -98,6 +101,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,6 +146,7 @@
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\03.객체의 책임과 크기.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\04.의존.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\05.캡슐화.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\06.다형성과 추상타입.cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 1(교육자료).cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 2(보드게임1).cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 3(보드게임2).cpp" />
@@ -162,6 +167,7 @@
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h" />
     <ClInclude Include="..\02.Cpp\Effective_cpp\CTextBlock.h" />
     <ClInclude Include="..\02.Cpp\Effective_cpp\TextBlock.h" />
+    <ClInclude Include="..\02.Cpp\코딩 스탠다드.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

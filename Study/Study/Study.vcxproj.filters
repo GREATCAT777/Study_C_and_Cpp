@@ -159,6 +159,9 @@
     <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp">
       <Filter>소스 파일\02.Cpp\강의</Filter>
     </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\06.다형성과 추상타입.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h">
@@ -169,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="..\02.Cpp\Effective_cpp\TextBlock.h">
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\02.Cpp\코딩 스탠다드.h">
+      <Filter>소스 파일\03.C_sharp\헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
