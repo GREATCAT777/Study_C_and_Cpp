@@ -24,12 +24,12 @@
     <Filter Include="소스 파일\02.Cpp\OOP_Design_Pattern">
       <UniqueIdentifier>{c3c38b77-3edb-45ab-9390-60aba19324d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03.C_sharp\헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="소스 파일\02.Cpp\강의">
       <UniqueIdentifier>{1fce7e19-700e-4160-aca4-326a3df53466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -174,7 +174,7 @@
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
     </ClInclude>
     <ClInclude Include="..\02.Cpp\코딩 스탠다드.h">
-      <Filter>소스 파일\03.C_sharp\헤더 파일</Filter>
+      <Filter>소스 파일\헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
