@@ -162,6 +162,9 @@
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\06.다형성과 추상타입.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
+    <ClCompile Include="07.재사용_상속보단_조립.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h">

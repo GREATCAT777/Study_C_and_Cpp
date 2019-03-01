@@ -83,9 +83,9 @@
 //	}
 //	ByteSource* Create() {
 //		if (useFile())
-//			return new FileDataReader();
+//			return (ByteSource*)(new FileDataReader());
 //		else
-//			return new SocketDataReader();
+//			return (ByteSource*)(new SocketDataReader());
 //	} 
 //};
 //
