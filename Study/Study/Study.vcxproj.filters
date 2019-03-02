@@ -177,6 +177,9 @@
     <ClCompile Include="11.템플릿메서드패턴.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
+    <ClCompile Include="12.상태패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h">

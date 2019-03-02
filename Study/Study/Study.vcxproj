@@ -167,6 +167,7 @@
     <ClCompile Include="09.디자인 패턴이란.cpp" />
     <ClCompile Include="10.전략패턴.cpp" />
     <ClCompile Include="11.템플릿메서드패턴.cpp" />
+    <ClCompile Include="12.상태패턴.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h" />
