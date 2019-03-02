@@ -163,6 +163,10 @@
     <ClCompile Include="..\02.Cpp\강의\7주차 - 4(벡터 컨테이너).cpp" />
     <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp" />
     <ClCompile Include="07.재사용_상속보단_조립.cpp" />
+    <ClCompile Include="08.설계원칙_SOLID.cpp" />
+    <ClCompile Include="09.디자인 패턴이란.cpp" />
+    <ClCompile Include="10.전략패턴.cpp" />
+    <ClCompile Include="11.템플릿메서드패턴.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h" />

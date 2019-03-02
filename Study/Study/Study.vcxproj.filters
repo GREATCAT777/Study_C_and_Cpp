@@ -165,6 +165,18 @@
     <ClCompile Include="07.재사용_상속보단_조립.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
+    <ClCompile Include="08.설계원칙_SOLID.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="09.디자인 패턴이란.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="10.전략패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="11.템플릿메서드패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h">
