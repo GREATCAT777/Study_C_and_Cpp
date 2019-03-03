@@ -105,9 +105,6 @@
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\02.객체.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
-    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\03.객체의 책임과 크기.cpp">
-      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
-    </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\04.의존.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
@@ -159,16 +156,10 @@
     <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp">
       <Filter>소스 파일\02.Cpp\강의</Filter>
     </ClCompile>
-    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\06.다형성과 추상타입.cpp">
-      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
-    </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\07.재사용_상속보단_조립.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\08.설계원칙_SOLID.cpp">
-      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\09.디자인 패턴이란.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\10.전략패턴.cpp">
@@ -178,6 +169,42 @@
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\12.상태패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\09.디자인_패턴이란.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\03.객체의_책임과_크기.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\06.다형성과_추상타입.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\13.데코레이터패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\14.프록시패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\15.어댑터패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\16.옵저버패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\17.미디에이터 패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\18.파사드패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\19.추상팩토리패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\20.컴포지트패턴.cpp">
+      <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\21.널객체패턴.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
   </ItemGroup>
