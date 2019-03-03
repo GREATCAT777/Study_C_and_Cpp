@@ -147,6 +147,12 @@
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\04.의존.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\05.캡슐화.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\06.다형성과 추상타입.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\07.재사용_상속보단_조립.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\08.설계원칙_SOLID.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\09.디자인 패턴이란.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\10.전략패턴.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\11.템플릿메서드패턴.cpp" />
+    <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\12.상태패턴.cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 1(교육자료).cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 2(보드게임1).cpp" />
     <ClCompile Include="..\02.Cpp\강의\5주차 - 3(보드게임2).cpp" />
@@ -162,12 +168,6 @@
     <ClCompile Include="..\02.Cpp\강의\7주차 - 3(클래스 원형큐)X.cpp" />
     <ClCompile Include="..\02.Cpp\강의\7주차 - 4(벡터 컨테이너).cpp" />
     <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp" />
-    <ClCompile Include="07.재사용_상속보단_조립.cpp" />
-    <ClCompile Include="08.설계원칙_SOLID.cpp" />
-    <ClCompile Include="09.디자인 패턴이란.cpp" />
-    <ClCompile Include="10.전략패턴.cpp" />
-    <ClCompile Include="11.템플릿메서드패턴.cpp" />
-    <ClCompile Include="12.상태패턴.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\Effective_cpp\box.h" />
