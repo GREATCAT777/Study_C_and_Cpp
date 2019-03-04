@@ -1,2 +1,21 @@
-﻿  06.다형성과 추상타입.cpp
-  Study.vcxproj -> D:\연습 프로젝트\Git_Code_Repository\Study_C_and_Cpp\Study\Debug\Study.exe
+﻿  01.객체지향과절차지향.cpp
+  03.객체의_책임과_크기.cpp
+  06.다형성과_추상타입.cpp
+  07.재사용_상속보단_조립.cpp
+  08.설계원칙_SOLID.cpp
+  09.디자인_패턴이란.cpp
+  10.전략패턴.cpp
+  11.템플릿메서드패턴.cpp
+  12.상태패턴.cpp
+  13.데코레이터패턴.cpp
+  14.프록시패턴.cpp
+  15.어댑터패턴.cpp
+  16.옵저버패턴.cpp
+  17.미디에이터 패턴.cpp
+  18.파사드패턴.cpp
+  19.추상팩토리패턴.cpp
+d:\연습 프로젝트\git_code_repository\study_c_and_cpp\study\02.cpp\oop_design_pattern\19.추상팩토리패턴.cpp(14): error C3646: 'l': 알 수 없는 재정의 지정자입니다.
+d:\연습 프로젝트\git_code_repository\study_c_and_cpp\study\02.cpp\oop_design_pattern\19.추상팩토리패턴.cpp(14): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
+  20.컴포지트패턴.cpp
+  21.널객체패턴.cpp
+  코드를 생성하고 있습니다...
