@@ -112,7 +112,7 @@ class EnemyFactory {
 public:
 	static EnemyFactory* getFactory(int level) {
 
-		//적 생성 규칙 변경시 , 새로운 팩토리 클래스를 만들면됨 -> 추상 팩토리!!!! 이거 던전 제너레이터에 쓸수있지 않을까?
+		//적 생성 규칙 변경시 ,상속받아서 새로운 팩토리 클래스를 만들면됨(구현은 각자) -> 추상 팩토리!!!! 이거 던전 제너레이터에 쓸수있지 않을까?
 		if (level == 1)
 			return new EasyStageEnemyFactory();
 		else
