@@ -5,6 +5,15 @@
 #include <iostream>
 #include <exception>
 
+/*
+이 기준은 내가 코딩할때 쓰이는 기준
+처음부터 막했지만 기준을 잡고 틀을 세워놔야 나중에 보기편하고
+예외처리 잡을때도 편할거같다.
+
+초보에 개념도 안잡혔지만 기준은 세워놓자
+나중에 후회하기전에
+*/
+
 class Rules { //클래스 선언시 대문자로 시작
 	// 순서 private 변수, public 변수 , protected변수, private 메서드, public 메서드 , protected 메서드
 private:
@@ -26,7 +35,7 @@ public :
 class Base { //베이스클래스를 만들때에는 앞에 Base 접두어 선정
 public:
 	virtual void Print() = 0;
-	virtual ~Base();
+	virtual ~Base() {};
 };
 class Inheritance_A : public Base {
 	void Print() override {

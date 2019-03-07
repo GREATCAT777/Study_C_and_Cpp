@@ -90,15 +90,6 @@
     <ClCompile Include="..\01.C\4주차 - 7(테트리스 참고2).c">
       <Filter>소스 파일\01.C</Filter>
     </ClCompile>
-    <ClCompile Include="..\02.Cpp\Effective_cpp\box.cpp">
-      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\Effective_cpp\main.cpp">
-      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="..\02.Cpp\Effective_cpp\TextBlock.cpp">
-      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
-    </ClCompile>
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\01.객체지향과절차지향.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
@@ -207,17 +198,14 @@
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\21.널객체패턴.cpp">
       <Filter>소스 파일\02.Cpp\OOP_Design_Pattern</Filter>
     </ClCompile>
+    <ClCompile Include="..\02.Cpp\Effective_cpp\2장.생성자_소멸자_대입연산자.cpp">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\Effective_cpp\1장.Cpp에_왔으면_cpp의_법을_따릅시다.cpp">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\02.Cpp\Effective_cpp\box.h">
-      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\02.Cpp\Effective_cpp\CTextBlock.h">
-      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\02.Cpp\Effective_cpp\TextBlock.h">
-      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
-    </ClInclude>
     <ClInclude Include="..\02.Cpp\코딩 스탠다드.h">
       <Filter>소스 파일\헤더 파일</Filter>
     </ClInclude>
