@@ -50,11 +50,12 @@ class Inheritance_B : public Base {
 
 class Singleton { //싱글톤
 private:
+	static Singleton* _instance;
+
+private:
 	Singleton() {
 		CheckInstance();
 	}
-	static Singleton* _instance;
-
 	void CheckInstance() {
 		if (_instance == nullptr)
 			_instance = new Singleton();
@@ -67,21 +68,22 @@ public :
 	}
 };
 
-class Factory{
+class BaseFactory{ //베이스 추상 클래스
 public :
+	virtual ~BaseFactory() {};
 	Base* AnOperation() { return FactoryMethod(); } //실질적인 호출을 하는곳 ex) A_creator.AnOperation();
 protected :
 	virtual Base* FactoryMethod() = 0; //상속받은 객체를 통해 재정의를 하고
 };
 
-class A_Creator : public Factory { //Inheritance_A를 생성하는 녀석
+class A_Creator : public BaseFactory { //Inheritance_A를 생성하는 녀석
 private:
 	Base* FactoryMethod() override {
 		return new Inheritance_A();
 	}
 };
 
-class B_Creator : public Factory {//Inheritance_B를 생성하는 녀석
+class B_Creator : public BaseFactory {//Inheritance_B를 생성하는 녀석
 private:
 	Base * FactoryMethod() override {
 		return new Inheritance_B();

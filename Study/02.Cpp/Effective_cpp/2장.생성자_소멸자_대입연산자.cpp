@@ -166,10 +166,72 @@ public:
 
 #pragma endregion
 
-#pragma region 8.객체 생성 및 소멸 과정 중에는 절대로 가상함수를 호출하지 말자
+#pragma region 8.객체 생성 및 소멸 과정 중에는 "절대로" 가상함수를 호출하지 말자
+
+class Transaction {
+public:
+	Transaction() {
+		logTransaction();
+	};
+	virtual void logTransaction() const = 0;// 파생 클래스에서 타입에 따라 달라지는 로그기록을 작성
+};
+
+class BuyTransaction :public Transaction {
+public:
+	virtual void logTransaction() const {
+		//구입거래 내역로그 기록
+	}
+};
+
+class SellTransaction :public Transaction {
+public:
+	virtual void logTransaction() const {
+		//판매거래 내역로그 기록
+	}
+};
 
 
-// 오늘은 여기까지!!!
 
+//기본클래스의 생성자가 호출될때에는 가상함수는 절대로 파생클래스 쪽으로 내려가지 않는다.
+
+//기본클래스 생성자가 호출되는 시점에 파생클래스 데이터 맴버는 아직 초기화된 상태가 아니라는 점이다.
+
+//파생클래스객체의 기본클래스 부분이 생성되는 동안 그 객체의 타입은 기본 클래스이다.
+
+//실수라도 생성자 영역에서 호출되는 함수들에 가상함수를 포함시키지 말자!
+
+
+//해결법
+
+class Transaction2 {
+public :
+	explicit Transaction2(const string& LogInfo) {
+		logTransaction(LogInfo);
+	};
+
+	void logTransaction(const string& LogInfo) const {};
+};
+
+class BuyTransaction2 :public Transaction2 {
+private:
+	static string createLogString(string param) { // 기본 클래스 생성자 쪽으로 넘길값을 생성하는 도우미 정적 함수
+		return param;
+	};
+public:
+	BuyTransaction2(string param) :Transaction2(createLogString(param)){
+		//로그 정보를 기본클래스 생성자로 넘긴다.
+		// "미초기화된 데이터 맴버는 정의되지 않은 상태에 있다"
+	};
+};
+
+// ★★★ 정리
+// - 생성자 혹은 소멸자 안에서 가상함수를 호출하지 말자.
+//	가상함수라 해도 지금 실행 중인 생성자나 소멸자에 해당되는 클래스의 파생클래스 쪽으로 내려가지 않기때문이다.
+
+#pragma endregion
+
+#pragma region 9. 대입 연산자는 *this 참조자를 반환 하게하자
+
+// 여기까지!
 
 #pragma endregion
