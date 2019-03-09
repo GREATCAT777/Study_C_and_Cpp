@@ -232,6 +232,24 @@ public:
 
 #pragma region 9. 대입 연산자는 *this 참조자를 반환 하게하자
 
-// 여기까지!
+class Widget {
+public:
+	Widget& operator+=(const Widget& rhs) {
+		//처리 해줄꺼 해주고!
+		return *this;
+	}
+	Widget& operator=(int rhs) {
+		//처리 해줄꺼 해주고!
+		return *this;
+	}
+};
+
+//★★★ 정리
+// -좌변 객체의 참조자를 반환 하게 만들자
+// - 대입 연산자는 *this의 참조자를 반환하게 만들자
+#pragma endregion
+
+
+#pragma region 11. operator= 에서는 자기 대입에 대한 처리가 빠지지 않도록 하자
 
 #pragma endregion
