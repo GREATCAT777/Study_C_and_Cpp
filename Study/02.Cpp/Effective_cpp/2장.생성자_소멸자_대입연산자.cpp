@@ -252,4 +252,21 @@ public:
 
 #pragma region 11. operator= 에서는 자기 대입에 대한 처리가 빠지지 않도록 하자
 
+void exam() {
+	class Widget2 {}
+	;
+	Widget2 w;
+
+	w = w; //자기에 대한 대입
+
+    // ex1) a[i] = a[j];    i 와 j가 같은 값을 가지게되면 자기 대입문이 된다.
+	// ex1) *px = *py;		px와 py가 가리키는 대상이 같으면 자기 대입이 된다.
+
+	//이러한 현상이 발생하는건 "중복 참조" 라고 불리는 것 때문이다.
+	//
+}
+
+
+
+
 #pragma endregion
