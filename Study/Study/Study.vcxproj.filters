@@ -204,6 +204,9 @@
     <ClCompile Include="..\02.Cpp\Effective_cpp\1장.Cpp에_왔으면_cpp의_법을_따릅시다.cpp">
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
     </ClCompile>
+    <ClCompile Include="..\02.Cpp\Effective_cpp\3.자원_관리.cpp">
+      <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\코딩 스탠다드.h">

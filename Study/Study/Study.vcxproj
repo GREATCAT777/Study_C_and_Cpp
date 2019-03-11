@@ -140,6 +140,7 @@
     <ClCompile Include="..\01.C\4주차 - 7(테트리스 참고2).c" />
     <ClCompile Include="..\02.Cpp\Effective_cpp\1장.Cpp에_왔으면_cpp의_법을_따릅시다.cpp" />
     <ClCompile Include="..\02.Cpp\Effective_cpp\2장.생성자_소멸자_대입연산자.cpp" />
+    <ClCompile Include="..\02.Cpp\Effective_cpp\3.자원_관리.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\01.객체지향과절차지향.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\02.객체.cpp" />
     <ClCompile Include="..\02.Cpp\OOP_Design_Pattern\03.객체의_책임과_크기.cpp" />
