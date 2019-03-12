@@ -93,7 +93,6 @@ void Func2() {
 
 #pragma region 13. 자원 관리 클래스의 복사 동작에 대해 진지하게 고찰하자
 
-
 void lock(mutex* pm) { pm->lock(); }
 void unlock(mutex* pm) { pm->unlock(); }
 
@@ -160,11 +159,125 @@ private:
 public:
 	explicit MUTEX_Lock3(mutex* pm) :mutexptr(pm, lock) {
 
-
-		lock(mutexptr.get());
+		lock(mutexptr.get()); //
 	}
 };
 
+void exam2() {
+	shared_ptr<Investment> pInv(CreateInvestment());
+	int daysHeld(const Investment* pi); //투자금이 유입된 이후로 경과한 날수
+
+	//int days = daysHeld(pInv); //에러
+	//-> daysHeld()함수는 Investment* 타입의 실제 포인터를 원하는데 실제로 주고있는건 shared_ptr<Investment>타입의 포인터이다.
+
+	// 해결할 방법 두가지
+	//스마트 포인터들은 명시적 변환을 수행하는 get()이라는 맴버함수를 제공한다.
+	// 이함수를 사용하면 각 타입으로 만든 스마트 포인터 객체에 들어있는 실제 포인터의 사본을 얻어낼수있다.
+
+	int days = daysHeld(pInv.get()); //이제 문제없다.
+
+	//제대로 구현된 스마트 포인터라면 (포인터역참조 연산자, operator-> 랑 operator*)도 오버로딩하고있다.
+	//pInv->SampleFunction();
+	//(*pInv).SampleFunction();
+
+	class FontHandle{};
+	FontHandle getFont(); //폰트얻어오기 함수
+
+	class Font {
+	private:
+		FontHandle f;
+	public:
+		explicit Font(const FontHandle& rhs) :f(rhs) {}
+		FontHandle get() const { return f; }		// 하부 수준 API를 쓸때마다 호출해주는 get함수
+													// 하부수준에 접근할때마다 호출해줘야한다.
+													//그래서 나온 대안
+		operator FontHandle() const { return f; }	//암시적 변환 함수
+	};
+
+	Font f1(getFont());
+	
+	FontHandle f2 = f1; //폰트 객체를 복사하는 것인데 f1이 FontHandle로 암시적으로 변환된 후 복사되었다.
+
+	//f1이 소멸될 시점을 생각해보면 f2의 상태는?? 메롱하쥬?
+}
+
+//★★★ 정리
+// - 실제 자원을 직접 접근해야 하는 깆존 API들도 많기 때문에, RAII 클래스를 만들때는 그 클래스가 관리하는 자원을 얻을수있는 방법을 열어주어야합니다.
+// - 자원 접근은 명시적 변환 혹은 암시적 변환을 통해 가능합니다. 안전성만 따지면 명시적 변환이 대체적으로 더 낫지만, 고객의 편의성을 놓고 보면 암시적 변환이 괜찮습니다.
+
 #pragma endregion
+
+#pragma region 15.new 및 delete 를 사용할때는 형태를 반드시 맞추자
+
+//배열의 형태로 동적할당을 했을때에는 반드시 배열의 형태로 해제해주자.
+
+//delete[] 로 선언한 형태로 해제가 될때에는 객체의 배열 크기 정보가 있다는것을 알려줄수있습니다.
+
+//delete intVal			//객체 하나 삭제
+//delete[] intVal		//객체의 배열을 삭제
+
+//typedef로 정의된 배열들도 배열형태로 객체를 삭제해주자.
+
+//★★★ 정리
+// - new 표현식에 배열을 썼으면 delete표현식에도 배열로 써주자. new[] -> delete[]
+// - 배열형태가 아니면 delete표현식에 배열로 선언하지 말자.		new	  -> delete
+
+#pragma endregion
+
+#pragma region new로 생성한 객체를 스마트 포인터에 저장하는 코드는 별도의 한 문장으로 만들자.
+
+//처리 우선순위를 아렬주는 함수가 하나있고, 동적으로 할장한 Widget 객체에 대해 어떤 우선순위에 따라 처리를 적용하는 함수가 하나 있다고 가정합니다.
+
+class Widget {};
+
+int Priotity();
+
+void processWidget(shared_ptr<Widget> pw, int priotity);
+
+void Exam3(){
+	//processWidget(new Widget, Priotity()); //컴파일이 안된다.
+
+	//포인터를 받는 shared_ptr 의 생성자는 explici t로 선언되있기 때문에, new Widget 표현식에 의해 만들어진 포인터가 
+	//shared_ptr 타입의 객체로 바꾸는 암시적인 변환이 없기 때문이다.
+
+	//반면 이건 컴파일 된다.
+
+	processWidget( shared_ptr<Widget>( new Widget ), Priotity() );
+	//하지만 이것도 자원을 흘릴 가능성이 있다.
+
+	//컴파일러는 processWidget 호출 코드를 만들기 전에 우선 이 함수의 매개변수로 넘겨지는 인자를 평가(evaluate)하는 순서를 밟는다.
+	// 첫번째 인자는 두부분으로 나누어져있다.
+
+	//"new Widget" 표현식을 실행하는 부분
+	//"shared_ptr" 생성자를 호출하는 부분
+
+	//컴파일러는 다음 세가지 연산을 위한 코드를 만들어야 한다.
+
+	//1. Priotity()를 호출
+	//2. new Widget를 실행
+	//3. shared_ptr의 생성자 호출
+
+	//각각의 연산이 실행되는 순서는 컴파일러 제작사마다 다르다는게 문제이다.
+
+	//만약 두번째에서 Priotity()를 호출한다면
+	// 2 -> 1 -> 3 순서로 결정되는데
+	//Priotity() 호출부분에서 예외가 발생한다면 첫번째(2)에서 만들어진 포인터가 유실된다.
+	//자원 누출을 막아줄줄 알고 준비한 shared_ptr에 들어가기도 전에 예외가 난다.
+
+	//자원 누출될 가능성이 있는 이유는 자원이 생성되는 시점과 그 자원이 자원 관리 객체로 넘어가는 시점 사이에 예외가 나올수있기 때문이다.
+
+	//이러한 문제를 피하는것은 간단하다.
+
+	shared_ptr<Widget> pw(new Widget);	//new 로 생성한 객체를 스마트 포인터에 담는 코드를 하나의 독립적인 문장으로 만든다.
+	processWidget(pw, Priotity());		//자원이 누출될 걱정이 없다!
+}
+
+//★★★ 정리
+// - new로 생성한 객체를 스마트 포인터로 넣는 코드는 별도의 한문장으로 만들자.
+// - 이런 준비가 안되어있으면 예외가 발생될 때 디버깅 하기 힘든 자원 누출이 초래될 수 있습니다.
+
+#pragma endregion
+
+
 
 
