@@ -198,4 +198,22 @@ inline const Rational operator*(const Rational& lhs, const Rational& rhs) {
 
 #pragma endregion
 
+#pragma region 21.������ �ɹ��� ����� ���� private�������� ��������
+
+class AccessLevels {
+private:
+	int noAccess;	//���� �Ұ�
+	int readOnly;	//�б� ����
+	int readWrite;	//�б� ����
+	int writeOnly;	//���� ����
+public:
+	int		getreadOnly() const		{ return readOnly; }
+	void	setreadWrite(int val)	{ readWrite = val; }
+	int		getreadWrite() const	{ return readWrite; }
+	void	setwriteOnly(int val)	{ writeOnly = val; }
+};
+
+class SpeeddataCollection { //�ڵ����� ��ռӵ��� ���ϴ� Ŭ����������.
+	int speed;
+public:
 
