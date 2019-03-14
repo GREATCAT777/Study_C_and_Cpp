@@ -198,14 +198,14 @@ inline const Rational operator*(const Rational& lhs, const Rational& rhs) {
 
 #pragma endregion
 
-#pragma region 21.占쏙옙占쏙옙占쏙옙 占심뱄옙占쏙옙 占쏙옙占쏙옙占� 占쏙옙占쏙옙 private占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙
+#pragma region 21.데이터 맴버가 선언될 곳은 private영역임을 명심하자
 
 class AccessLevels {
 private:
-	int noAccess;	//占쏙옙占쏙옙 占쌀곤옙
-	int readOnly;	//占싻깍옙 占쏙옙占쏙옙
-	int readWrite;	//占싻깍옙 占쏙옙占쏙옙
-	int writeOnly;	//占쏙옙占쏙옙 占쏙옙占쏙옙
+	int noAccess;	//접근 불가
+	int readOnly;	//읽기 전용
+	int readWrite;	//읽기 쓰기
+	int writeOnly;	//쓰기 전용
 public:
 	int		getreadOnly() const		{ return readOnly; }
 	void	setreadWrite(int val)	{ readWrite = val; }
@@ -213,7 +213,72 @@ public:
 	void	setwriteOnly(int val)	{ writeOnly = val; }
 };
 
-class SpeeddataCollection { //占쌘듸옙占쏙옙占쏙옙 占쏙옙欖撻占쏙옙占� 占쏙옙占싹댐옙 클占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙.
+class SpeeddataCollection { //자동차의 평균속도를 구하는 클래스라하자.
 	int speed;
 public:
+	void addValue(int val) {	speed += val;	};
+	double averageSoFar() const {	/*return ? ;*/ };
+};
+
+// 메모리가 부족하고, 평균값이 자주 필요하지 않은 프로그램에서는 매번 평균값을 계산하는편이 좋을것이고
+
+// 평균값이 매번 필요하고 속도가 중요하며 메모리 크기에 구애받지 않는 환경이면 평균값을 유지하는 방법이 좋을것이다.
+
+
+//★★★ 정리
+// - 데이처 맴버는 private로 선언합시다. 이를 통해 클래스 제작자는 문법적으로 일관성있는 데이터 접근 통로를 제공할수있고
+//		필요에 따라서는 세밀한 접근제어도 가능하며, 클래스의 불변속성을 강화할수있을분 아니라, 내부 구현의 융통성도 발휘할수있스비다.
+// - protected는 public보다 더 많이 "보호"받고 있는 것이 절대로 아니다.
+
+#pragma endregion
+
+#pragma region 22. 맴버 함수 보다는 비 맴버 비 프렌드 함수와 더 가까워지자.
+
+//웹브라우저를 나타내는 클래스가 하나 있다고 가정하자.
+namespace WebBrowserStuff{
+	class WebBrowser {
+	public:
+		void clearCache() {};
+		void clearHistory() {};
+		void removeCookies() {};
+		//이러한 세가지 함수가 있을수있겠다.
+		//이 세동작을 한번에 부르고 싶어하는 사람들도 있기에 세 함수를 모아서 불러주는 함수도 있을것이다.
+
+		//첫번째로 맴버 함수로써 구현하는것
+		void clearEverything() {
+			clearCache();
+			clearHistory();
+			removeCookies();
+		}
+	};
+
+	//두번째로 비맴버 함수에서 웹브라우서 객체의 맴버 함수를 순서대로 호출하는것
+	void clearBrowser(WebBrowser& wb) {
+		wb.clearCache();
+		wb.clearHistory();
+		wb.removeCookies();
+	}
+
+	//객체지향을 지키는 방법은 할수있을 만큼 데이터를 캡슐화 하는것이지만 clearBrowser의 구현이 캡슐화 기준에서 더 낫다.
+	//비맴버  함수를 사용하면 WebBrowser 관련 기능을 구성하는데 있어서 패키징 유연성이 높아지는 장점이있다.
+	// 또한 이로인해 얻게 되는 추가적인 이점으로 컴파일 의존도도 낮추고 WebBrowser의 확장성도 높일수 있다.
+
+	//1. 비맴버 비프렌드 함수에만 적용된다. 캡슐화라는 관점에서 friend키워드는 클래스 자체에서 맴버에 접근하는 권한이랑 같기 때문이다.
+	//2." 함수는 어떤 클래스의 비맴버가 되어야 한다. =/ 그 함수는 다른 클래스의 맴버가 될수없다. "라는 의미가 아니다.
+	//		Cpp로써 더 자연스러운 구현은 하나의 namespace에 묶어 놓는것이다.
+	//		편의 기능을 제공하는 함수들은 카테고리 별로 헤더를 만들어서 같은 namespace안에 선언 및 정의를 해주자.
+}
+
+//★★★ 정리
+// - 맴버 ㅎ마수 보다는 비맴버 비프렌드 함수를 자주쓰도록 하자. 캡슐화 정도가 높아지고, 패키징 유연성도 커지며, 기능적인 확장성도 늘어난다.
+#pragma endregion
+
+#pragma region 23. 타입 변환이 모든 매개변수에 대해 적용되아야 한다면 비맴버 함수를 선언하자.
+
+// 오늘은 여기까지
+
+#pragma endregion
+
+
+
 
