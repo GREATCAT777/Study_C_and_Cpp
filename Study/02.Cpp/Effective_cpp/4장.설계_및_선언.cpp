@@ -179,20 +179,21 @@ bool balidateStudent(const Student& s) {};
 class Rational {
 private:
 	int n, d;
-	friend const Rational operator*(const Rational& lhs, const Rational& rhs);
+private:
+	//friend const Rational operator*(const Rational& lhs, const Rational& rhs);
 public:
 	Rational(int numerator = 0, int denominator = 1) :n(numerator), d(denominator) {};
-};
 
-//연산자 오버로딩의 문제에서 새로운 객체를 반환해야할때
-inline const Rational operator*(const Rational& lhs, const Rational& rhs) {
-	return Rational(lhs.n * rhs.n, lhs.d * rhs.d);
-}
+	//연산자 오버로딩의 문제에서 새로운 객체를 반환해야할때 주의) friend 키워드 짚고 넘어가자 진짜
+	friend inline const Rational operator*(const Rational& lhs, const Rational& rhs) {
+		return Rational(lhs.n * rhs.n, lhs.d * rhs.d);
+	}
+};
 
 //반환값을 생성하고 소멸시키는 비용이 들지만 올바른 동작에 들어가는 비용이다.
 
 //★★★ 정리
-// - 지역 스택 객체에 대한 포인터난 참조자를 반환하는 일, 혹은 힙에 할당된 객체에 대한 참조자를 반환하는일,
+// - 지역 스택 객체에 대한 포인터나 참조자를 반환하는 일, 혹은 힙에 할당된 객체에 대한 참조자를 반환하는일,
 //	또는 지역 정적 객체에 대한 포인터나 참조자를 반환하는 일은 그런 객체가 두개 이상 필요해질 가능성이 있다면
 //	절대로 하지말자.(항목 3 참조 - 지역 정적 객체에 대해 참조자를 반환하도록 설계된 올바른 예제가 있다.)
 
@@ -273,11 +274,46 @@ namespace WebBrowserStuff{
 // - 맴버 ㅎ마수 보다는 비맴버 비프렌드 함수를 자주쓰도록 하자. 캡슐화 정도가 높아지고, 패키징 유연성도 커지며, 기능적인 확장성도 늘어난다.
 #pragma endregion
 
-#pragma region 23. 타입 변환이 모든 매개변수에 대해 적용되아야 한다면 비맴버 함수를 선언하자.
+#pragma region 23. 타입 변환이 모든 매개변수에 대해 적용되어야 한다면 비맴버 함수를 선언하자.
 
-// 오늘은 여기까지
+class Rational {
+private:
+	int m_N;
+	int m_D;
+public:
+	Rational(int numerator = 0, int denomiator = 1) : m_N(numerator), m_D(denomiator) {};
+
+	int numerator() const {
+		return m_N;
+	}
+	int denomiator() const {
+		return m_D;
+	}
+};
+
+//비 맴버 함수로 정의 해놓으면 모든 매개변수에 대해 타입 변환을 정의할수있다.
+const Rational operator* (const Rational& lhs, const Rational& rhs) {
+	return Rational(lhs.numerator() *rhs.numerator(), lhs.denomiator() * rhs.denomiator());
+}
+
+//★★★ 정리
+// - 어떤 함수에 들어가는 모든 매개변수(this포인터가 가리키는 객체도 포함)에 대해 타입 변환을
+//	해 줄 필요가 있다면, 그함수는 비맴버야 한다.
 
 #pragma endregion
+
+#pragma region 24.예외를 던지지 핞는 swap에 대한 지원도 생각해보자.
+
+template<typename T>
+void MySwap(T& a, T& b) {
+	T temp(a);
+	a = b;
+	b = temp;
+}
+
+
+#pragma endregion
+
 
 
 
