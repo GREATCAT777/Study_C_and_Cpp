@@ -210,7 +210,7 @@
     <ClCompile Include="..\02.Cpp\Effective_cpp\3장.자원_관리.cpp">
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
     </ClCompile>
-    <ClCompile Include="5장.구현.cpp">
+    <ClCompile Include="..\02.Cpp\Effective_cpp\5장.구현.cpp">
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
     </ClCompile>
   </ItemGroup>
