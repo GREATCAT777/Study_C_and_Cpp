@@ -179,6 +179,7 @@
     <ClCompile Include="..\02.Cpp\강의\7주차 - 3(클래스 원형큐)X.cpp" />
     <ClCompile Include="..\02.Cpp\강의\7주차 - 4(벡터 컨테이너).cpp" />
     <ClCompile Include="..\02.Cpp\강의\7주차 - 5(deuqe 컨테이너).cpp" />
+    <ClCompile Include="..\02.Cpp\자료구조_알고리즘\LinkedList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\코딩 스탠다드.h" />

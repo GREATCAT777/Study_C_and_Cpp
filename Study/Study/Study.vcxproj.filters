@@ -31,6 +31,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="소스 파일\02.Cpp\자료구조_알고리즘">
+      <UniqueIdentifier>{0a4b0b52-88e9-4de6-8096-a0a7703ede10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\01.C\1주차 - 1(선분 충).c">
@@ -212,6 +215,9 @@
     </ClCompile>
     <ClCompile Include="..\02.Cpp\Effective_cpp\5장.구현.cpp">
       <Filter>소스 파일\02.Cpp\Effective_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\자료구조_알고리즘\LinkedList.cpp">
+      <Filter>소스 파일\02.Cpp\자료구조_알고리즘</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
