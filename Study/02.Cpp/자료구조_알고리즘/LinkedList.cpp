@@ -2,8 +2,6 @@
 
 namespace LinkedList {
 
-
-
 	class List {
 		struct Node {
 			int data;
@@ -32,7 +30,7 @@ namespace LinkedList {
 		int size;
 	public:
 
-		List() :head(nullptr), tail(nullptr) { size = 0; }
+		List() :head(nullptr), tail(nullptr), size(0) {}
 
 		~List() {
 			while (!empty()) {								//헤드가 null이 될때까지 순회
@@ -49,19 +47,18 @@ namespace LinkedList {
 
 			if (head == nullptr)
 				head = tail = new Node(data);				//머리,꼬리 새로 만들어주기
-			else {
-				tail = tail->push_back(tail, data);			//현재 꼬리뒤에 새로운 노드를 추가하고, 새로운 노드를 꼬리로 선언
-				size++;
-			}
+
+			tail = tail->push_back(tail, data);			//현재 꼬리뒤에 새로운 노드를 추가하고, 새로운 노드를 꼬리로 선언
+			size++;
+
 		}
 
 		void push_front(int data) {							//맨 앞자리에 추가하기
 			if (tail == nullptr)
 				tail = head = new Node(data);
-			else {
+
 				head = head->push_front(head, data);		//현재 머리 앞에 새로운 노드를 추가하고, 새로운 노드를 머리로 선언
 				size++;
-			}
 		}
 
 		void pop_front() {									//머리 날리기
@@ -80,12 +77,12 @@ namespace LinkedList {
 		void pop_back() {									//꼬리 날리기
 			if (head == tail) {
 				delete head;
-				head = tail = nullptr;	
+				head = tail = nullptr;
 			}
 			else {
-				Node* del = tail; 
-				tail = tail->next; 
-				delete del;	
+				Node* del = tail;
+				tail = tail->next;
+				delete del;
 				size--;
 			}
 		}
@@ -99,28 +96,29 @@ namespace LinkedList {
 
 		Node* at(int number) {								//원소 찾기
 
-			if (number > size || number <= 0)					//사이즈보다 크거나 0보다 작으면 바로 null 반환
+			if (number > size || number < 0)					//사이즈보다 크거나 0보다 작으면 바로 null 반환
 				return nullptr;
-
-			Node* cur = head;
-			for (size_t i = 0; i < number; i++)
-			{
-				cur = cur->next;
+			else {
+				Node* cur = head;
+				for (size_t i = 0; i < number; i++)
+				{
+					cur = cur->next;
+				}
+				return cur;
 			}
-			return cur;
 		}
 
-		void Insert(int number,int data) {
+		void Insert(int number, int data) {
 
 			if (tail == nullptr || head == nullptr)
 				tail = head = new Node(data);
 
 			else {
-			Node* cur = at(number);
+				Node* cur = at(number);
 
-			cur = cur->push_back(cur,data);
+				cur = cur->push_back(cur, data);
 
-			size++;
+				size++;
 			}
 		}
 	};

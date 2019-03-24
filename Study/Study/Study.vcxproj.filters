@@ -219,6 +219,12 @@
     <ClCompile Include="..\02.Cpp\자료구조_알고리즘\LinkedList.cpp">
       <Filter>소스 파일\02.Cpp\자료구조_알고리즘</Filter>
     </ClCompile>
+    <ClCompile Include="..\02.Cpp\자료구조_알고리즘\BST.cpp">
+      <Filter>소스 파일\02.Cpp\자료구조_알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="..\02.Cpp\자료구조_알고리즘\BubbleSortcpp.cpp">
+      <Filter>소스 파일\02.Cpp\자료구조_알고리즘</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\02.Cpp\코딩 스탠다드.h">
